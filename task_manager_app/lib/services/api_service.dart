@@ -7,7 +7,7 @@ import '../models/task.dart';
 class ApiService {
   static final dio = Dio(
     BaseOptions(
-      baseUrl: "https://task-management-flutter-app-1.onrender.com",
+      baseUrl: "https://task-management-flutter-app-1.onrender.com/api",
       // baseUrl: 'http://10.0.2.2:5000/api',
       connectTimeout: const Duration(seconds: 10),
       receiveTimeout: const Duration(seconds: 10),
