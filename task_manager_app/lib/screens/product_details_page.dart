@@ -177,7 +177,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
         slivers: [
           // Hero Image Section
           SliverAppBar(
-            expandedHeight: 400,
+            expandedHeight: 380 ,
             pinned: false,
             automaticallyImplyLeading: false,
             flexibleSpace: FlexibleSpaceBar(
@@ -212,7 +212,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                                     color: Colors.grey.shade200,
                                     child: const Center(
                                       child: Icon(Icons.image_not_supported,
-                                          size: 64, color: Colors.grey),
+                                          size: 54, color: Colors.grey),
                                     ),
                                   ),
                             ),
@@ -241,7 +241,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                     : Container(
                         color: Colors.grey.shade200,
                         child: const Center(
-                          child: Icon(Icons.image, size: 64, color: Colors.grey),
+                          child: Icon(Icons.image, size: 54, color: Colors.grey),
                         ),
                       ),
               ),
@@ -282,7 +282,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       ),
                     ),
                     
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 8),
                     
                     // Product Name
                     Text(
@@ -294,7 +294,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       ),
                     ),
                     
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 8),
                     
                     // Rating and Reviews
                     Container(
@@ -365,7 +365,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                                     );
                                   }),
                                 ),
-                                const SizedBox(height: 4),
+                                const SizedBox(height: 2),
                                 Text(
                                   "Based on ${_product!.productRatingCount} reviews",
                                   style: TextStyle(
@@ -380,7 +380,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           
                           // View Reviews Button
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                             decoration: BoxDecoration(
                               color: Colors.grey.shade100,
                               borderRadius: BorderRadius.circular(8),
@@ -398,70 +398,71 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       ),
                     ),
                     
-                    const SizedBox(height: 24),
+                    const SizedBox(height: 16),
                     
-                    // Price Section
-                    Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [Colors.deepPurple.shade50, Colors.blue.shade50],
-                        ),
-                        borderRadius: BorderRadius.circular(16),
-                        border: Border.all(color: Colors.deepPurple.shade100),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Price",
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.grey.shade600,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            _product!.currentProductPrice,
-                            style: theme.textTheme.headlineMedium?.copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.deepPurple.shade700,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    
-                    const SizedBox(height: 24),
+                // Price Section (Smaller)
+Container(
+  width: double.infinity,
+  padding: const EdgeInsets.all(12), // reduced from 20
+  decoration: BoxDecoration(
+    gradient: LinearGradient(
+      colors: [Colors.deepPurple.shade50, Colors.blue.shade50],
+    ),
+    borderRadius: BorderRadius.circular(10), // reduced from 16
+    border: Border.all(color: Colors.deepPurple.shade100),
+  ),
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        "Price",
+        style: TextStyle(
+          fontSize: 10, // reduced from 8
+          color: Colors.grey.shade600,
+          fontWeight: FontWeight.w500,
+        ),
+      ),
+      const SizedBox(height: 1.5), // reduced from 2
+      Text(
+        _product!.currentProductPrice,
+        style: theme.textTheme.titleLarge?.copyWith( // smaller than headlineMedium
+          fontWeight: FontWeight.bold,
+          color: Colors.deepPurple.shade700,
+        ),
+      ),
+    ],
+  ),
+),
+
+const SizedBox(height: 12), // reduced from 18
+
                     
                     // Description Section
-                    Text(
-                      "Description",
-                      style: theme.textTheme.titleLarge?.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey.shade900,
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-                    Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: Colors.grey.shade50,
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.grey.shade200),
-                      ),
-                      child: Text(
-                        _product!.productDescription,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.grey.shade700,
-                          height: 1.6,
-                        ),
-                      ),
-                    ),
+                    // Text(
+                    //   "Description",
+                    //   style: theme.textTheme.titleLarge?.copyWith(
+                    //     fontWeight: FontWeight.bold,
+                    //     color: Colors.grey.shade900,
+                    //   ),
+                    // ),
+                    // const SizedBox(height: 12),
+                    // Container(
+                    //   width: double.infinity,
+                    //   padding: const EdgeInsets.all(16),
+                    //   decoration: BoxDecoration(
+                    //     color: Colors.grey.shade50,
+                    //     borderRadius: BorderRadius.circular(12),
+                    //     border: Border.all(color: Colors.grey.shade200),
+                    //   ),
+                    //   child: Text(
+                    //     _product!.productDescription,
+                    //     style: TextStyle(
+                    //       fontSize: 16,
+                    //       color: Colors.grey.shade700,
+                    //       height: 1.6,
+                    //     ),
+                    //   ),
+                    // ),
                     
                     const SizedBox(height: 32),
                     

@@ -19,7 +19,7 @@ class Keyword {
       objectId: json['_id'] is Map<String, dynamic>
           ? json['_id']['\$oid'] ?? ''
           : json['_id'] ?? '',
-      id: json['id'] ?? '',             // ✅ this is the one products API needs
+      id: json['id'] ?? '',             
       keyword: json['keyword'] ?? '',
       category: json['category'] ?? '',
       subcategory: json['subcategory'] ?? '',

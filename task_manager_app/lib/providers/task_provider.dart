@@ -1,46 +1,4 @@
-// import 'package:flutter_riverpod/flutter_riverpod.dart';
-// import '../models/task.dart';
-
-// class TaskNotifier extends StateNotifier<List<Task>> {
-//   TaskNotifier() : super([]);
-
-//   void addTask(String title, String keywordId) {
-//     final newTask = Task(
-//       id: DateTime.now().toString(),
-//       title: title,
-//       keywordId: keywordId,
-//     );
-//     state = [...state, newTask];
-//   }
-
-//   void editTask(String id, String newTitle, String keywordId) {
-//     state = [
-//       for (final task in state)
-//         if (task.id == id)
-//           task.copyWith(title: newTitle, keywordId: keywordId)
-//         else
-//           task
-//     ];
-//   }
-
-//   void deleteTask(String id) {
-//     state = state.where((task) => task.id != id).toList();
-//   }
-
-//   void toggleComplete(String id) {
-//     state = [
-//       for (final task in state)
-//         if (task.id == id)
-//           task.copyWith(isCompleted: !task.isCompleted)
-//         else
-//           task
-//     ];
-//   }
-// }
-
-// final taskProvider =
-//     StateNotifierProvider<TaskNotifier, List<Task>>((ref) => TaskNotifier());
-
+ 
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/task.dart';
